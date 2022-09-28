@@ -37,7 +37,6 @@ void GuiHash::on_pushButton_clicked()
 
 
 }
-//
 void GuiHash::on_pushButton_2_clicked()
 {
    ui->lineEdit->setText(QFileDialog::getOpenFileName(nullptr,"Открыть","","*.*"));
@@ -311,7 +310,7 @@ QString GuiHash::ReadFileByte(QString fileName)
 
 
     } catch (...) {
-           QMessageBox::warning(nullptr,"Ошибка","Неудается вычислить ХЭШ файл не найден",QMessageBox::Ok);
+           QMessageBox::warning(nullptr,"Ошибка","Неудается вычислить хэш, файл не найден",QMessageBox::Ok);
         return  "";
     }
 
@@ -402,7 +401,7 @@ QString GuiHash::ReadDirectoryByte(QString fileName)
         }
     }
     catch (...) {
-          QMessageBox::warning(nullptr,"Ошибка","Неудается вычислить ХЭШ",QMessageBox::Ok);
+          QMessageBox::warning(nullptr,"Ошибка","Неудается вычислить хэш",QMessageBox::Ok);
           return  "";
     }
 
@@ -457,7 +456,7 @@ QStringList GuiHash::OpenFileCompare (QString fileName)
     }
     catch (...)
     {
-           QMessageBox::warning(nullptr,"Ошибка","Неудается вычислить ХЭШ файл не найден",QMessageBox::Ok);
+           QMessageBox::warning(nullptr,"Ошибка","Неудается вычислить хэш, файл не найден",QMessageBox::Ok);
            return{""};
     }
 }
@@ -517,7 +516,7 @@ void GuiHash::on_actionClear_triggered()
 
 void GuiHash::on_actionAbout_triggered()
 {
-   QMessageBox::about(this, "Информация о программе","Данное программное обеспечение позволяет вычислить ХЭШ-значение файлов и каталогов в соответсвии с алгоритмом BELT-HASH");
+   QMessageBox::about(this, "Информация о программе","Данное программное обеспечение позволяет вычислить хэш-значение файлов и каталогов в соответствии с алгоритмом BELT-HASH");
 
 }
 
@@ -531,7 +530,7 @@ void GuiHash::on_tabWidget_tabBarClicked(int index)
 {
     switch (index)
     {
-    case 0: ui->statusBar->showMessage("Выбран режим работы для вычисления хэш-значения фйала");
+    case 0: ui->statusBar->showMessage("Выбран режим работы для вычисления хэш-значения файла");
             break;
     case 1: ui->statusBar->showMessage("Выбран режим работы для вычисления хэш-значения каталога");
             break;

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
+    <width>950</width>
     <height>650</height>
    </rect>
   </property>
@@ -83,7 +83,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <property name="iconSize">
        <size>
@@ -129,7 +129,7 @@
         </font>
        </property>
        <attribute name="title">
-        <string comment="Вычислить хэш-значение для файла" extracomment="Вычислить хэш-значение для файла">-------------------------ХЭШ файла-----------------------------</string>
+        <string comment="Вычислить хэш-значение для файла" extracomment="Вычислить хэш-значение для файла">-------------------------------ХЭШ файла----------------------------------</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="9" column="0" colspan="5">
@@ -171,7 +171,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Укажите  путь к файлу </string>
+           <string>Укажите   путь  к  файлу </string>
           </property>
          </widget>
         </item>
@@ -306,7 +306,7 @@
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string comment="Вычислить ХЭШ значения для каталога" extracomment="Вычислить ХЭШ значения для каталога">--------------------------------ХЭШ каталога-------------------------------</string>
+        <string comment="Вычислить ХЭШ значения для каталога" extracomment="Вычислить ХЭШ значения для каталога">----------------------------ХЭШ каталога-------------------------------</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
@@ -481,7 +481,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>900</width>
+     <width>950</width>
      <height>22</height>
     </rect>
    </property>
