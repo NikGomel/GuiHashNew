@@ -37,7 +37,7 @@ void GuiHash::on_pushButton_clicked()
 
 
 }
-
+//
 void GuiHash::on_pushButton_2_clicked()
 {
    ui->lineEdit->setText(QFileDialog::getOpenFileName(nullptr,"Открыть","","*.*"));
@@ -426,14 +426,14 @@ void GuiHash::on_pushButton_8_clicked()
 void GuiHash::on_pushButtonFile1_clicked()
 {
 
-    ui->lineFile1->setText(QFileDialog::getOpenFileName(nullptr,"Открыть"," ","*.txt;;*.*"));
+    //ui->lineFile1->setText(QFileDialog::getOpenFileName(nullptr,"Открыть"," ","*.txt;;*.*"));
 
 
 }
 
 void GuiHash::on_pushButtonFile2_clicked()
 {
-    ui->lineFile2->setText(QFileDialog::getOpenFileName(nullptr,"Открыть"," ","*.txt;;*.*"));
+    //ui->lineFile2->setText(QFileDialog::getOpenFileName(nullptr,"Открыть"," ","*.txt;;*.*"));
 }
 
 
@@ -473,71 +473,6 @@ QStringList GuiHash::OpenFileCompare (QString fileName)
     }
 }
 
-void GuiHash::on_pushButtonCompare_clicked()
-{
-    try {
-        ui->textBrowserFile1->clear();
-        ui->progressBarCompare->reset();
-
-        QStringList compare1 = OpenFileCompare(ui->lineFile1->displayText());
-        QStringList compare2 = OpenFileCompare(ui->lineFile2->displayText());
-
-bool status = false;
-int range = compare1.length();
-int step = 1;
-ui->progressBarCompare->setRange(step,range);
-
-foreach (QString hash1, compare1)
-{
-    QString temp1 = hash1.section(QRegExp("   |\t"),1);
-
-    if(temp1.compare("",Qt::CaseInsensitive)!=0)
-    {
-    foreach (QString hash2, compare2)
-    {
-        QString temp2 = hash2.section(QRegExp("   |\t"),1);
-        if(temp2.compare(temp1,Qt::CaseInsensitive)==0)
-        {
-
-            status = true;
-            break;
-        }
-        else
-        {
-
-            status = false;
-        }
-    }
-    if(status)
-    {
-
-          ui->textBrowserFile1->append("STATUS: OK "+hash1.toUtf8()+"\r\n");
-
-    }
-    else {
-
-
-
-        ui->textBrowserFile1->append("STATUS: NO FOUND "+hash1+"\r\n");
-
-    }
-
-    }
-
-  ui->progressBarCompare->setValue(step++) ;
-
-QCoreApplication::processEvents();
-}
-
-
-
-    }
-    catch (...)
-    {
-           QMessageBox::warning(nullptr,"Ошибка","Неудается сравнить указанные файлы",QMessageBox::Ok);
-
-    }
-}
 
 void GuiHash::on_pushButton_9_clicked()
 {
@@ -548,7 +483,7 @@ void GuiHash::on_pushButton_9_clicked()
         {
             QTextStream textStream (&saveFile);
 
-            textStream<<ui->textBrowserFile1->toPlainText();
+         //   textStream<<ui->textBrowserFile1->toPlainText();
 
         }
         saveFile.close();
@@ -608,8 +543,8 @@ void GuiHash::on_actionClear_triggered()
             break;
     case 1: GuiHash::on_pushButton_8_clicked();
             break;
-    case 2: ui->textBrowserFile1->clear();
-            ui->progressBarCompare->reset();
+  //  case 2: ui->textBrowserFile1->clear();
+    //        ui->progressBarCompare->reset();
 
             break;
     default: break;
@@ -658,3 +593,5 @@ void GuiHash::on_actionCompare_triggered()
 {
     ui->tabWidget->setCurrentIndex(2);
 }
+
+

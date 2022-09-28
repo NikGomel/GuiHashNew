@@ -54,6 +54,7 @@ private slots:
     void on_actionFile_triggered();
     void on_actionDir_triggered();
     void on_actionCompare_triggered();
+    void on_tabWidget_currentChanged(int index);
 };
 
 #endif // GUIHASH_H

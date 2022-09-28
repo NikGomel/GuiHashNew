@@ -69,6 +69,8 @@
       <property name="font">
        <font>
         <pointsize>11</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
        </font>
       </property>
       <property name="acceptDrops">
@@ -81,7 +83,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <property name="iconSize">
        <size>
@@ -109,10 +111,22 @@
       </property>
       <widget class="QWidget" name="tab">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
        </property>
        <attribute name="title">
         <string comment="Вычислить хэш-значение для файла" extracomment="Вычислить хэш-значение для файла">ХЭШ файла</string>
@@ -130,6 +144,8 @@
            <font>
             <family>Courier New</family>
             <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
            </font>
           </property>
           <property name="inputMethodHints">
@@ -180,6 +196,8 @@
           <property name="font">
            <font>
             <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
            </font>
           </property>
           <property name="text">
@@ -224,6 +242,8 @@
           <property name="font">
            <font>
             <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
            </font>
           </property>
           <property name="text">
@@ -311,6 +331,8 @@
            <font>
             <family>Courier New</family>
             <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
            </font>
           </property>
           <property name="verticalScrollBarPolicy">
@@ -351,6 +373,8 @@
           <property name="font">
            <font>
             <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
            </font>
           </property>
           <property name="text">
@@ -369,6 +393,8 @@
           <property name="font">
            <font>
             <pointsize>11</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
            </font>
           </property>
           <property name="text">
@@ -445,15 +471,6 @@
          </widget>
         </item>
        </layout>
-      </widget>
-      <widget class="QWidget" name="widget">
-       <property name="layoutDirection">
-        <enum>Qt::LeftToRight</enum>
-       </property>
-       <attribute name="title">
-        <string/>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_6"/>
       </widget>
      </widget>
     </item>
