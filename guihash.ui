@@ -21,7 +21,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="qres.qrc">
-    <normaloff>:/new/icon/Icon.png</normaloff>:/new/icon/Icon.png</iconset>
+    <normaloff>:/new/icon/outlogo.png</normaloff>:/new/icon/outlogo.png</iconset>
   </property>
   <property name="documentMode">
    <bool>false</bool>

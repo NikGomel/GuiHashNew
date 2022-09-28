@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/new/icon">
         <file>Icon.png</file>
+        <file>outlogo.png</file>
     </qresource>
 </RCC>
