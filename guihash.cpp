@@ -423,18 +423,7 @@ void GuiHash::on_pushButton_8_clicked()
       ui->progressBarDirectory->reset();
 }
 
-void GuiHash::on_pushButtonFile1_clicked()
-{
 
-    //ui->lineFile1->setText(QFileDialog::getOpenFileName(nullptr,"Открыть"," ","*.txt;;*.*"));
-
-
-}
-
-void GuiHash::on_pushButtonFile2_clicked()
-{
-    //ui->lineFile2->setText(QFileDialog::getOpenFileName(nullptr,"Открыть"," ","*.txt;;*.*"));
-}
 
 
 QStringList GuiHash::OpenFileCompare (QString fileName)
@@ -474,29 +463,7 @@ QStringList GuiHash::OpenFileCompare (QString fileName)
 }
 
 
-void GuiHash::on_pushButton_9_clicked()
-{
-    try {
-        QString nameSave = QFileDialog::getSaveFileName(nullptr,"Сохранить","report","*.txt");
-        QFile saveFile(nameSave);
-        if(saveFile.open(QIODevice::WriteOnly))
-        {
-            QTextStream textStream (&saveFile);
 
-         //   textStream<<ui->textBrowserFile1->toPlainText();
-
-        }
-        saveFile.close();
-
-    }
-    catch (...)
-    {
-           QMessageBox::information(nullptr,"Ошибка","Файл не может быть сохранен");
-
-
-    }
-
-}
 
 
 void GuiHash::on_actionOpen_triggered()
@@ -508,9 +475,7 @@ case 0: GuiHash::on_pushButton_2_clicked();
         break;
 case 1: GuiHash::on_pushButton_4_clicked();
         break;
-case 2: GuiHash::on_pushButtonFile1_clicked();
-        GuiHash::on_pushButtonFile2_clicked();
-        break;
+
 default: break;
 }
 
@@ -526,9 +491,9 @@ void GuiHash::on_actionSave_triggered()
             break;
     case 1: GuiHash::on_pushButton_6_clicked();
             break;
-    case 2: GuiHash::on_pushButton_9_clicked();
 
-            break;
+
+
     default: break;
     }
 
@@ -543,10 +508,9 @@ void GuiHash::on_actionClear_triggered()
             break;
     case 1: GuiHash::on_pushButton_8_clicked();
             break;
-  //  case 2: ui->textBrowserFile1->clear();
-    //        ui->progressBarCompare->reset();
 
-            break;
+
+
     default: break;
     }
 }
@@ -571,14 +535,11 @@ void GuiHash::on_tabWidget_tabBarClicked(int index)
             break;
     case 1: ui->statusBar->showMessage("Выбран режим работы для вычисления хэш-значения каталога");
             break;
-    case 2: ui->statusBar->showMessage("Выбран режим работы для сравнения вычисленных хэш-значений файлов");
-            break;
+
     default: break;
 
     }
 }
-
-
 void GuiHash::on_actionFile_triggered()
 {
     ui->tabWidget->setCurrentIndex(0);
@@ -589,9 +550,6 @@ void GuiHash::on_actionDir_triggered()
     ui->tabWidget->setCurrentIndex(1);
 }
 
-void GuiHash::on_actionCompare_triggered()
-{
-    ui->tabWidget->setCurrentIndex(2);
-}
+
 
 

@@ -41,10 +41,9 @@ private slots:
     void on_pushButton_6_clicked();
     void on_pushButton_7_clicked();
     void on_pushButton_8_clicked();
-    void on_pushButtonFile1_clicked();
-    void on_pushButtonFile2_clicked();
-    void on_pushButtonCompare_clicked();
-    void on_pushButton_9_clicked();
+
+
+
     void on_actionOpen_triggered();
     void on_actionSave_triggered();
     void on_actionClear_triggered();
@@ -53,8 +52,8 @@ private slots:
     void on_tabWidget_tabBarClicked(int index);
     void on_actionFile_triggered();
     void on_actionDir_triggered();
-    void on_actionCompare_triggered();
-    void on_tabWidget_currentChanged(int index);
+
+    //void on_tabWidget_currentChanged(int index);
 };
 
 #endif // GUIHASH_H
